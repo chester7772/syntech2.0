@@ -212,7 +212,7 @@ function displayActiveCourses(){
         let allContent = '';
 
         content.forEach((lesson, index)=>{ 
-            allContent += ` <div class ="courseCard .js-moduleCard"><a href="{{url_for('static',filename= 'course-content.html')}}?title=${lesson.title}&code=${course.code}">
+            allContent += ` <div class ="courseCard .js-moduleCard"><a href="course-content.html?title=${lesson.title}&code=${course.code}">
                 <p>${lesson.title}</p>
                 <p>Progress = ${lesson.progress}%</p>
             </a></div>`  
