@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename= 'dashboard.css')}}">
+</head>
+<body>
+    <div class="pageContainer">
+        <div class="sideBar">
+            <div class="user">
+                <h1>User</h1>
+            </div>
+
+            
+            <nav class="nav">
+                <button class="js-myLearning js-buttons buttonOnclick " >Learning</button>
+                <button class=" js-courses js-buttons">Courses</button>
+                <button class="js-challenges js-buttons">Challenges</button>
+                <button class="js-settings js-buttons">Settings</button>
+            </nav>
+            <button class="logout">Logout</button>
+        </div>
+        
+        <div class="mainBody">
+            <div class="allCourses js-allCourses">
+                <div class="js-moduleList  cards"></div>
+                
+                <div class="js-activeList cards show "></div>
+                
+                <div class="js-coursesContainer coursesContainer cards">
+                    <div class="js-courseListContainer ">
+                        <h1>Courses</h1>
+                        <div class="js-courseList courseList"></div>
+                    </div>
+
+                    <div class="js-careerListContainer ">
+                        <h1>Career Paths</h1>
+                        <div class="js-careerList courseList"></div>
+                    </div>
+                </div>
+
+                <div class="js-cssModules  cards"></div>
+                <div class="js-jsModules   cards"></div>
+                <div class="js-htmlModules cards"></div>
+
+
+                <div class="js-cssRightModules  cards"></div>
+                <div class="js-jsRightModules   cards"></div>
+                <div class="js-htmlRightModules cards"></div>
+                <div class="js-htmlCourseContent "></div>
+                <div class="js-cssCourseContent "></div>
+                <div class="js-jsCourseContent "></div>
+            </div>
+            
+    </div>
+
+    <script type="module" src="{{url_for('static',filename= 'dashboard.js')}}"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+.pageContainer{
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    margin: 20px;
+    height: 95vh;
+    overflow: hidden;
+}
+
+.sideBar{
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    
+}
+
+.sideBar button{
+    background: transparent;
+    color: #f8dbdb;
+    margin-top: 60px;
+    height: 30px;
+    font-size: 17px;
+    border: none;
+    align-content: center;
+    justify-content: center;
+}
+
+.mainBody{
+    padding: 20px;
+    flex: 1;
+    height: fit-content;
+    background-color: #eeeeee;
+    border-radius: 15px;
+    color: #000;
+    overflow: hidden;
+}
+
+.allCourses{
+    padding: 20px;
+}
+
+.moduleCard{
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    background : transparent;    
+}
+
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    height: 75%;
+}
+
+.logout{
+    margin-bottom:0px;
+}
+
+.nav .buttonOnclick{
+    color: #fff;
+    border-right: 4px solid #fff;
+}
+
+.cards {
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.showLesson{
+    display: block;
+}
+
+.courseList{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    overflow-y: auto;
+    background-color: #000;
+    height: 17rem;
+    width: 100%;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.coursesContainer{
+    padding: 20px;
+    width: 100%;
+}
+
+.courseCard{
+    align-items: center;
+    flex-direction: row;
+    height: 10rem;
+    width: 40rem;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid #ddd;
+    background-color: #f8f6f6;
+}
+
+
+.courseCard h1{
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.myLearningCourseList{
+    
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    overflow-y: auto;
+    background-color: #000;
+    color: #fff;
+    height: 17rem;
+    width: 100%;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.myLearningCourseList a{
+    color: #000;
+    text-decoration: none;
+}
+
+.enrollButton{
+    cursor: pointer;
+    width: 4.5rem;
+    height: 2rem;
+    border: 3px solid #000;
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+.enrollButton:hover{
+    border-radius: 7px;
+    background-color: #000;
+    color: #f8dbdb;
+}

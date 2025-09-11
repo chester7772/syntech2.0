@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SynTech-auth | Login</title>
+</head>
+<body>
+    <div class="pageContainer">
+        <form class="signupForm" method="POST">
+            <label for="username">Username</label>
+            <input class="emailInput" name="username" type="text" placeholder="Enter username">
+
+            <label for="password">Password</label>
+            <input class="passwordInput" name="password" type="password" placeholder="Create password">
+
+            <button type="submit"  class="js-submitButton">Submit</button>
+
+            <div class="js-message"></div>
+        </form>
+        <p> no account <a href="{{url_for('register')}}">register</a></p>
+    </div>
+
+    <script type="module" src="login.js"></script>
+</body>
+</html>
