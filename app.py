@@ -12,6 +12,7 @@ db= SQLAlchemy(app)
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key= True)
+    email= db.Column(db.String(150),unique=True, nullable=False)
     username= db.Column(db.String(150),unique=True, nullable=False)
     password= db.Column(db.String(200),unique=True, nullable=False)
 
@@ -25,17 +26,18 @@ def home():
 @app.route("/register", methods= ["GET", "POST"])
 def register():
     if request.method == "POST":
+        email = request.form['email']
         username = request.form['username']
         password = request.form['password']
 
-        existing_user =User.query.filter_by(username=username).first()
+        existing_user =User.query.filter_by(email=email).first()
 
         if existing_user:
-            flash ("Username already exists")
+            flash ("Email already exists")
 
         hashed_pw = generate_password_hash(password)
 
-        new_user= User(username= username, password= hashed_pw)
+        new_user= User(email=email,username= username, password= hashed_pw)
         db.session.add(new_user)
         db.session.commit()
         return redirect (url_for('login'))
@@ -46,10 +48,10 @@ def register():
 @app.route("/login", methods= ["GET", "POST"])
 def login():
     if request.method == "POST":
-        username = request.form['username']
+        email = request.form['email']
         password = request.form['password']
 
-        user= User.query.filter_by(username= username).first()
+        user= User.query.filter_by(email= email).first()
 
         if not user:
             flash ("user does not exist")
