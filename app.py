@@ -59,6 +59,7 @@ def login():
         if user and check_password_hash(user.password,password):
             session["user_id"] = user.id
             session["username"] = user.username
+            session["email"] = user.email
 
             return redirect(url_for('dashboard'))
         flash ("invalid username or password")
@@ -76,7 +77,7 @@ def dashboard():
 
 @app.route("/api/user")
 def api_user():
-    return {"username": session.get("username")}
+    return {"username": session.get("username") ,"email": session.get("email")}
 
 @app.route("/logout")
 def logout():

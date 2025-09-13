@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="../static/dashboard.css">
 </head>
 <body>
     <div class="pageContainer">
@@ -21,7 +21,7 @@
                 <button class="js-settings js-buttons">Settings</button>
             </nav>
             <button class="logout">Logout</button>
-        </div>
+        </div> <!--side bar end-->
         
         <div class="mainBody">
             <div class="allCourses js-allCourses">
@@ -39,23 +39,22 @@
                         <h1>Career Paths</h1>
                         <div class="js-careerList courseList"></div>
                     </div>
-                </div>
+                </div> <!--courses container end-->
+            </div> <!--all courses end-->
 
-                <div class="js-cssModules  cards"></div>
-                <div class="js-jsModules   cards"></div>
-                <div class="js-htmlModules cards"></div>
+        </div><!--main body end-->
 
+        <div class="js-settingsList settingsList cards ">
+            <p>Profile</p>
+            <p class="js-username">Username</p>
+            <p class="js-email">Email</p>
+            <p>Achievements & Badges</p>
+            
+        </div> <!--settings list end-->
 
-                <div class="js-cssRightModules  cards"></div>
-                <div class="js-jsRightModules   cards"></div>
-                <div class="js-htmlRightModules cards"></div>
-                <div class="js-htmlCourseContent "></div>
-                <div class="js-cssCourseContent "></div>
-                <div class="js-jsCourseContent "></div>
-            </div>
             
     </div>
 
-    <script type="module" src="dashboard.js"></script>
+    <script type="module" src="../static/dashboard.js"></script>
 </body>
 </html>

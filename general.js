@@ -12,6 +12,9 @@ export function updateUser(){
     .then(res => res.json())
     .then(data => {
         document.querySelector('.user').innerHTML = `<h2>${data.username}</h2>`
+        document.querySelector('.js-username').innerHTML = `<h2>${data.username}</h2>`
+        document.querySelector('.js-email').innerHTML = `<h2>${data.email}</h2>`
+        console.log(data)
     })
 
 }

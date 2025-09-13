@@ -2,7 +2,6 @@ import { courseList,moduleList, myLearning, courseContent, careerPath,updateUser
 let cards = document.querySelectorAll('.cards');
 let htmlCourseContent= '';
 let lessonContent='';
-const username = "{{username}}";
 
 updateUser()
 
@@ -121,6 +120,8 @@ document.querySelectorAll('.js-courseCard').forEach((courseCard)=>{
     })
 })
 
+
+/*
 //display modules
 if(htmlModules){
     document.querySelector('.js-htmlModules').innerHTML= htmlModules
@@ -130,6 +131,7 @@ if(cssModules){
 }if(jsModules){
     document.querySelector('.js-jsModules').innerHTML= jsModules
 }
+*/
 
 //right
 /*
@@ -171,6 +173,12 @@ document.querySelector('.js-courses').addEventListener('click',()=>{
         card.classList.remove('show')
     })
     document.querySelector('.js-coursesContainer').classList.add('show')
+    })
+
+
+document.querySelector('.js-settings').addEventListener('click',()=>{
+    
+    document.querySelector('.js-settingsList').classList.add('show')
 })
 
 
